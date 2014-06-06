@@ -1,0 +1,152 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>ee.planet</groupId> 
+  <artifactId>planet</artifactId>
+  <packaging>war</packaging>
+  <version>1.0-SNAPSHOT</version>
+  <name>planet</name>
+  <url>http://maven.apache.org</url>
+<repositories> 
+  <repository> 
+    <id>eclipselink</id> 
+    <url>http://www.eclipse.org/downloads/download.php?r=1&amp;nf=1&amp;file=/rt/eclipselink/maven.repo/</url> 
+  </repository> 
+</repositories>
+  <dependencies>
+   <dependency> 
+    <groupId>org.eclipse.persistence</groupId> 
+    <artifactId>eclipselink</artifactId> 
+    <version>2.3.2</version> 
+  </dependency>
+    <dependency> 
+    <groupId>org.eclipse.persistence</groupId> 
+    <artifactId>javax.persistence</artifactId> 
+    <version>2.0.0</version> 
+  </dependency>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <!-- <scope>test</scope>  -->
+    </dependency>
+    <dependency>
+	<groupId>com.google.code.gson</groupId>
+	<artifactId>gson</artifactId>
+	<version>1.4</version>
+</dependency>
+            
+	
+	  <dependency>
+        <groupId>log4j</groupId>
+        <artifactId>log4j</artifactId>
+        <version>1.2.16</version>
+      </dependency>
+<dependency> 
+   <groupId>javax.servlet</groupId> 
+   <artifactId>jstl</artifactId> 
+   <version>1.2</version> 
+</dependency>
+<dependency>
+    <groupId>javax.servlet</groupId>
+    <artifactId>javax.servlet-api</artifactId>
+    <version>3.0.1</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+ <groupId>org.springframework</groupId>
+ <artifactId>spring-context</artifactId>
+ <version>3.1.1.RELEASE</version>
+</dependency> 
+
+<dependency> 
+   <groupId>org.springframework</groupId> 
+   <artifactId>spring-webmvc</artifactId> 
+   <!-- Set this to the respective version --> 
+   <version>3.1.1.RELEASE</version> 
+</dependency>
+ 
+
+<dependency>
+ <groupId>org.springframework.data</groupId>
+ <artifactId>spring-data-jpa</artifactId>
+ <version>1.0.3.RELEASE</version>
+</dependency> 
+	 <dependency>
+         <groupId>postgresql</groupId>
+         <artifactId>postgresql</artifactId>
+         <version>9.0-801.jdbc4</version>
+	 </dependency>	
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-core</artifactId>
+            <version>4.1.2.Final</version>
+        </dependency>
+<dependency>
+	<groupId>org.hibernate</groupId>
+	<artifactId>hibernate-entitymanager</artifactId>
+	<version>4.1.2.Final</version>
+</dependency>
+
+<dependency>
+        <groupId>org.hibernate</groupId>
+        <artifactId>hibernate-validator</artifactId>
+        <version>4.3.0.Final</version>
+    </dependency>    
+    <dependency>
+        <groupId>javax.validation</groupId>
+        <artifactId>validation-api</artifactId>
+        <version>1.0.0.GA</version>
+    </dependency>
+	<dependency>
+  <groupId>org.codehaus.jackson</groupId>
+  <artifactId>jackson-mapper-asl</artifactId>
+  <version>1.5.3</version>
+</dependency>
+<dependency>
+ <groupId>commons-dbcp</groupId>
+ <artifactId>commons-dbcp</artifactId>
+ <version>1.4</version>
+ </dependency>
+ <dependency>
+    <groupId>c3p0</groupId>
+    <artifactId>c3p0</artifactId>
+    <version>0.9.1.2</version>
+</dependency>
+
+  </dependencies>
+  <build>
+    <finalName>remonditeenus</finalName>
+	<plugins>
+	 <plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-compiler-plugin</artifactId>
+    <version>3.1</version>
+    <configuration>
+        <source>1.7</source>
+        <target>1.7</target>
+    </configuration>
+</plugin>
+	<plugin> 
+    <groupId>org.apache.maven.plugins</groupId> 
+    <artifactId>maven-war-plugin</artifactId> 
+    <version>2.4</version>
+      <configuration>
+    <!--<webXml>WebContent\WEB-INF\web.xml</webXml>-->   
+    <outputDirectory>C:\Program Files\Apache Software Foundation\Tomcat 7.0\webapps</outputDirectory>   
+  	</configuration>
+
+</plugin>
+ <plugin>
+  <groupId>org.codehaus.mojo</groupId>
+  <artifactId>tomcat-maven-plugin</artifactId>
+  <configuration>
+    <url>http://imbi.ld.ttu.ee:7500/manager/text</url>
+    <server>imbi.ld.ttu.ee</server>
+    <path>/t112150_remonditeenus</path>
+  </configuration>
+</plugin>
+</plugins> 
+
+  </build>
+</project>
